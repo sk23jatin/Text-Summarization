@@ -1,0 +1,73 @@
+A decision tree is a decision support tool that uses a tree-like graph or model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility. It is one way to display an algorithm that only contains conditional control statements.
+A decision tree is a flowchart-like structure in which each internal node represents a “test” on an attribute (e.g. whether a coin flip comes up heads or tails), each branch represents the outcome of the test, and each leaf node represents a class label (decision taken after computing all attributes). The paths from root to leaf represent classification rules.
+Tree based learning algorithms are considered to be one of the best and mostly used supervised learning methods. Tree based methods empower predictive models with high accuracy, stability and ease of interpretation. Unlike linear models, they map non-linear relationships quite well. They are adaptable at solving any kind of problem at hand (classification or regression). Decision Tree algorithms are referred to as CART (Classification and Regression Trees).
+“The possible solutions to a given problem emerge as the leaves of a tree, each node representing a point of deliberation and decision.”
+- Niklaus Wirth (1934 — ), Programming language designer
+Methods like decision trees, random forest, gradient boosting are being popularly used in all kinds of data science problems. Common terms used with Decision trees:
+Root Node: It represents entire population or sample and this further gets divided into two or more homogeneous sets.
+Splitting: It is a process of dividing a node into two or more sub-nodes.
+Decision Node: When a sub-node splits into further sub-nodes, then it is called decision node.
+Leaf/ Terminal Node: Nodes do not split is called Leaf or Terminal node.
+Pruning: When we remove sub-nodes of a decision node, this process is called pruning. You can say opposite process of splitting.
+Branch / Sub-Tree: A sub section of entire tree is called branch or sub-tree.
+Parent and Child Node: A node, which is divided into sub-nodes is called parent node of sub-nodes whereas sub-nodes are the child of parent node.
+Applications for Decision Tree - Decision trees have a natural “if … then … else …” construction that makes it fit easily into a programmatic structure. They also are well suited to categorization problems where attributes or features are systematically checked to determine a final category. For example, a decision tree could be used effectively to determine the species of an animal.
+As a result, the decision making tree is one of the more popular classification algorithms being used in Data Mining and Machine Learning. Example applications include:
+· Evaluation of brand expansion opportunities for a business using historical sales data
+· Determination of likely buyers of a product using demographic data to enable targeting of limited advertisement budget
+· Prediction of likelihood of default for applicant borrowers using predictive models generated from historical data
+· Help with prioritization of emergency room patient treatment using a predictive model based on factors such as age, blood pressure, gender, location and severity of pain, and other measurements
+· Decision trees are commonly used in operations research, specifically in decision analysis, to help identify a strategy most likely to reach a goal.
+Because of their simplicity, tree diagrams have been used in a broad range of industries and disciplines including civil planning, energy, financial, engineering, healthcare, pharmaceutical, education, law, and business.
+How does Decision Tree works ?
+Decision tree is a type of supervised learning algorithm (having a pre-defined target variable) that is mostly used in classification problems. It works for both categorical and continuous input and output variables. In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables.
+Example:-
+Let’s say we have a sample of 30 students with three variables Gender (Boy/ Girl), Class (IX/ X) and Height (5 to 6 ft). 15 out of these 30 play cricket in leisure time. Now, we want to create a model to predict who will play cricket during leisure period? In this problem, we need to segregate students who play cricket in their leisure time based on highly significant input variable among all three.
+This is where decision tree helps, it will segregate the students based on all values of three variable and identify the variable, which creates the best homogeneous sets of students (which are heterogeneous to each other). In the snapshot below, you can see that variable Gender is able to identify best homogeneous sets compared to the other two variables.
+Decision tree identifies the most significant variable and its value that gives best homogeneous sets of population. To identify the variable and the split, decision tree uses various algorithms.
+Types of Decision Trees
+Types of decision tree is based on the type of target variable we have. It can be of two types:
+Categorical Variable Decision Tree: Decision Tree which has categorical target variable then it called as categorical variable decision tree. E.g.:- In above scenario of student problem, where the target variable was “Student will play cricket or not” i.e. YES or NO.
+Continuous Variable Decision Tree: Decision Tree has continuous target variable then it is called as Continuous Variable Decision Tree.
+E.g.:- Let’s say we have a problem to predict whether a customer will pay his renewal premium with an insurance company (yes/ no). Here we know that income of customer is a significant variable but insurance company does not have income details for all customers. Now, as we know this is an important variable, then we can build a decision tree to predict customer income based on occupation, product and various other variables. In this case, we are predicting values for continuous variable.
+The decision tree algorithm tries to solve the problem, by using tree representation. Each internal node of the tree corresponds to an attribute, and each leaf node corresponds to a class label.
+Place the best attribute of the dataset at the root of the tree.
+Split the training set into subsets. Subsets should be made in such a way that each subset contains data with the same value for an attribute.
+Repeat step 1 and step 2 on each subset until you find leaf nodes in all the branches of the tree.
+In decision trees, for predicting a class label for a record we start from the root of the tree. We compare the values of the root attribute with record’s attribute. On the basis of comparison, we follow the branch corresponding to that value and jump to the next node.
+We continue comparing our record’s attribute values with other internal nodes of the tree until we reach a leaf node with predicted class value. The modeled decision tree can be used to predict the target class or the value.
+Assumptions while creating Decision Tree
+Some of the assumptions we make while using Decision tree:
+At the beginning, the whole training set is considered as the root.
+Feature values are preferred to be categorical. If the values are continuous then they are discretized prior to building the model.
+Records are distributed recursively on the basis of attribute values.
+Order to placing attributes as root or internal node of the tree is done by using some statistical approach.
+Advantages of Decision Tree:
+Easy to Understand: Decision tree output is very easy to understand even for people from non-analytical background. It does not require any statistical knowledge to read and interpret them. Its graphical representation is very intuitive and users can easily relate their hypothesis.
+Useful in Data exploration: Decision tree is one of the fastest way to identify most significant variables and relation between two or more variables. With the help of decision trees, we can create new variables / features that has better power to predict target variable. It can also be used in data exploration stage. For e.g., we are working on a problem where we have information available in hundreds of variables, there decision tree will help to identify most significant variable.
+Decision trees implicitly perform variable screening or feature selection.
+Decision trees require relatively little effort from users for data preparation.
+Less data cleaning required: It requires less data cleaning compared to some other modeling techniques. It is not influenced by outliers and missing values to a fair degree.
+Data type is not a constraint: It can handle both numerical and categorical variables. Can also handle multi-output problems.
+Non-Parametric Method: Decision tree is considered to be a non-parametric method. This means that decision trees have no assumptions about the space distribution and the classifier structure.
+Non-linear relationships between parameters do not affect tree performance.
+The number of hyper-parameters to be tuned is almost null.
+Disadvantages of Decision Tree:
+Over fitting: Decision-tree learners can create over-complex trees that do not generalize the data well. This is called overfitting. Over fitting is one of the most practical difficulty for decision tree models. This problem gets solved by setting constraints on model parameters and pruning.
+Not fit for continuous variables: While working with continuous numerical variables, decision tree loses information, when it categorizes variables in different categories.
+Decision trees can be unstable because small variations in the data might result in a completely different tree being generated. This is called variance, which needs to be lowered by methods like bagging and boosting.
+Greedy algorithms cannot guarantee to return the globally optimal decision tree. This can be mitigated by training multiple trees, where the features and samples are randomly sampled with replacement.
+Decision tree learners create biased trees if some classes dominate. It is therefore recommended to balance the data set prior to fitting with the decision tree.
+Information gain in a decision tree with categorical variables gives a biased response for attributes with greater no. of categories.
+Generally, it gives low prediction accuracy for a dataset as compared to other machine learning algorithms.
+Calculations can become complex when there are many class label.
+Regression Trees vs Classification Trees
+The terminal nodes (or leaves) lies at the bottom of the decision tree. This means that decision trees are typically drawn upside down such that leaves are the bottom & roots are the tops.
+Both the trees work almost similar to each other. The primary differences and similarities between Classification and Regression Trees are:
+Regression trees are used when dependent variable is continuous. Classification Trees are used when dependent variable is categorical.
+In case of Regression Tree, the value obtained by terminal nodes in the training data is the mean response of observation falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mean value.
+In case of Classification Tree, the value (class) obtained by terminal node in the training data is the mode of observations falling in that region. Thus, if an unseen data observation falls in that region, we’ll make its prediction with mode value.
+Both the trees divide the predictor space (independent variables) into distinct and non-overlapping regions.
+Both the trees follow a top-down greedy approach known as recursive binary splitting. We call it as ‘top-down’ because it begins from the top of tree when all the observations are available in a single region and successively splits the predictor space into two new branches down the tree. It is known as ‘greedy’ because, the algorithm cares (looks for best variable available) about only the current split, and not about future splits which will lead to a better tree.
+This splitting process is continued until a user defined stopping criteria is reached. For e.g.: we can tell the algorithm to stop once the number of observations per node becomes less than 50.
+In both the cases, the splitting process results in fully grown trees until the stopping criteria is reached. But, the fully grown tree is likely to over fit data, leading to poor accuracy on unseen data. This bring ‘pruning’. Pruning is one of the technique used tackle overfitting.
